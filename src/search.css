@@ -74,11 +74,32 @@
   border-radius: 0 61px 61px 0;
 }
 
+.autocomplete {
+  width: 500px;
+  margin: 0;
+  padding: 0;
+}
+
+.autocomplete option {
+  font-size: 15px;
+  padding: 15px 10px;
+}
+
+.autocomplete option:hover {
+  font-weight: bold;
+}
+
+.autocomplete option::selection {
+  background-color: darkblue;
+}
+
 @media (max-width: 400px) {
   .search img {
     width: 90%;
   }
-  .search-div input {
+  .input-light,
+  .input-dark,
+  .autocomplete {
     width: 250px;
   }
 }

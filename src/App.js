@@ -46,9 +46,10 @@ export default function App() {
         })
         .then((results) => {
           setNewtags(results.data);
+          console.log(data())
         });
     }
-  }, [searchGif]);
+  }, [search]);
 
   return (
     <div className={isDarkMode ? "app" : "app-dark"}>
@@ -57,7 +58,6 @@ export default function App() {
         isDarkMode={isDarkMode}
         search={search}
         setSearch={setSearch}
-        result={result}
         setSearchGif={setSearchGif}
         newtags={newtags}
       />
