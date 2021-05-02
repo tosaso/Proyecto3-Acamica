@@ -1,7 +1,14 @@
 import React from "react";
 import "./search.css";
 
-function Search({ isDarkMode, search, setSearch, newtags, setSearchGif }) {
+function Search({
+  isDarkMode,
+  search,
+  setSearch,
+  result,
+  newtags,
+  setSearchGif
+}) {
   return (
     <div className="search">
       <h1 className={isDarkMode ? "titulo-light" : "titulo-dark"}>
@@ -22,11 +29,6 @@ function Search({ isDarkMode, search, setSearch, newtags, setSearchGif }) {
             setSearchGif(true);
           }}
         >
-          <div>
-            {newtags.map((data) => (
-              <p>{data.name}</p>
-            ))}
-          </div>
           <img src="./images/search-icon.svg" alt="Buscar" />
         </button>
       </div>

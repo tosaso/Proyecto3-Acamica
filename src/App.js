@@ -36,7 +36,7 @@ export default function App() {
   }, [searchGif]);
 
   useEffect(() => {
-    if (search === true) {
+    if (searchGif === true) {
       let autocomplete = fetch(
         `https://api.giphy.com/v1/gifs/search/tags?api_key=zUqJUBhQc8ayRD9ekQbf4JuaKPdkSvU8&q=${search}&limit=4&offset=0&rating=g&lang=es`
       );
@@ -48,7 +48,7 @@ export default function App() {
           setNewtags(results.data);
         });
     }
-  }, [search]);
+  }, [searchGif]);
 
   return (
     <div className={isDarkMode ? "app" : "app-dark"}>
@@ -57,6 +57,7 @@ export default function App() {
         isDarkMode={isDarkMode}
         search={search}
         setSearch={setSearch}
+        result={result}
         setSearchGif={setSearchGif}
         newtags={newtags}
       />

@@ -32,7 +32,7 @@
   flex-direction: row;
 }
 
-.search-div input {
+.input-light {
   border: 1px solid #572ee5;
   width: 500px;
   border-radius: 61px 0 0 61px;
@@ -40,12 +40,31 @@
   font-size: 15px;
 }
 
-.search-div input:focus {
+.input-light:focus {
   outline: none;
 }
 
-.search-div input::placeholder {
+.input-light:placeholder {
   font-size: 15px;
+}
+
+.input-dark {
+  border: 1px solid #572ee5;
+  width: 500px;
+  border-radius: 61px 0 0 61px;
+  padding: 11px;
+  font-size: 15px;
+  color: white;
+  background-color: transparent;
+}
+
+.input-dark:focus {
+  outline: none;
+}
+
+.input-dark:placeholder {
+  font-size: 15px;
+  color: white;
 }
 
 .search-div button {
