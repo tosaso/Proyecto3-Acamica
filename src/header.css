@@ -1,0 +1,45 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.logo {
+  width: 63px;
+  height: auto;
+}
+
+.btn-dark {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  color: #572ee5;
+  background-color: white;
+  border: 1px solid #572ee5;
+  padding: 0px 20px;
+  text-transform: uppercase;
+  border-radius: 61px;
+  box-shadow: none;
+}
+.btn-dark:hover {
+  color: white;
+  background-color: #572ee5;
+}
+
+/* en modo oscuro, cambio a light*/
+.btn-light {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  color: white;
+  background-color: #373737;
+  border: 1px solid white;
+  padding: 0px 20px;
+  text-transform: uppercase;
+  border-radius: 61px;
+  box-shadow: none;
+}
+.btn-light:hover {
+  color: white;
+  background-color: #572ee5;
+  border: none;
+}

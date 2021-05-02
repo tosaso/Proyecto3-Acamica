@@ -1,0 +1,13 @@
+.app {
+  font-family: sans-serif;
+  text-align: center;
+  background-color: #fff;
+  padding: 2rem;
+}
+
+.app-dark {
+  font-family: sans-serif;
+  text-align: center;
+  background-color: #373737;
+  padding: 2rem;
+}
