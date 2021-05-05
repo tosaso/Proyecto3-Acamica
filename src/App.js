@@ -36,19 +36,16 @@ export default function App() {
   }, [searchGif]);
 
   useEffect(() => {
-    if (searchGif === true) {
-      let autocomplete = fetch(
-        `https://api.giphy.com/v1/gifs/search/tags?api_key=zUqJUBhQc8ayRD9ekQbf4JuaKPdkSvU8&q=${search}&limit=4&offset=0&rating=g&lang=es`
-      );
-      autocomplete
-        .then((response) => {
-          return response.json();
-        })
-        .then((results) => {
-          setNewtags(results.data);
-          console.log(data())
-        });
-    }
+    let autocomplete = fetch(
+      `https://api.giphy.com/v1/gifs/search/tags?api_key=zUqJUBhQc8ayRD9ekQbf4JuaKPdkSvU8&q=${search}&limit=4&offset=0&rating=g&lang=es`
+    );
+    autocomplete
+      .then((response) => {
+        return response.json();
+      })
+      .then((results) => {
+        setNewtags(results.data);
+      });
   }, [search]);
 
   return (

@@ -2,6 +2,10 @@ import React from "react";
 import "./search.css";
 
 function Search({ isDarkMode, search, setSearch, newtags, setSearchGif }) {
+  function fantasma(input) {
+    setSearch(input);
+  }
+
   return (
     <div className="search">
       <h1 className={isDarkMode ? "titulo-light" : "titulo-dark"}>
@@ -25,14 +29,18 @@ function Search({ isDarkMode, search, setSearch, newtags, setSearchGif }) {
           <img src="./images/search-icon.svg" alt="Buscar" />
         </button>
       </div>
-      {/*
-      <select className="autocomplete" size="4">
-        <option>resultado 1</option>
-        <option>resultado 2</option>
-        <option>resultado 3</option>
-        <option>resultado 4</option>
-      </select>
-      */}
+      <div>
+        {newtags.map((data) => (
+          <p
+            onClick={() => fantasma(data.name)}
+            onChange={() => {
+              setSearchGif(true);
+            }}
+          >
+            {data.name}
+          </p>
+        ))}
+      </div>
     </div>
   );
 }
